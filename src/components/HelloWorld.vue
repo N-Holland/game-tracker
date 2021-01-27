@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+     <v-btn text color="primary" @click=Upload>Upload</v-btn>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,10 +32,29 @@
 </template>
 
 <script>
+import Game from "../lib/Game";
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods:
+  {
+    upload() {
+      let upload;
+      try {
+        upload = Game.Set(
+          true,
+          Date.now(),
+          ["Researcher","Scientist"]
+        );
+        alert("Upload Success!");
+      } catch (err) {
+        alert("Upload Failed!");
+      }
+      return upload;
+    },
   }
 }
 </script>

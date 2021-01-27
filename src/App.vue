@@ -6,11 +6,17 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
+const firebase = require("./lib/Firebase");
+
 export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
+  created() {
+    this.$store.commit("setFirebase", firebase);
+    console.log("firebase= ", firebase);
+  },
 }
 </script>
 

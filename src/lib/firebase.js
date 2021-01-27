@@ -1,5 +1,5 @@
 const firebase = require("firebase/app");
-require("firebase/storage");
+//require("firebase/storage");
 require("firebase/firestore");
 require("firebase/auth");
 
@@ -24,9 +24,9 @@ function InitFirebase() {
     .auth()
     .setPersistence(firebase.auth.Auth.Persistence.NONE)
     .then(() => {
-      const provider = new firebase.auth.GoogleAuthProvider();
+      //const provider = new firebase.auth.GoogleAuthProvider();
     })
-    .catch(error => {});
+    .catch(error => {console.log(error)});
 }
 
 InitFirebase();
