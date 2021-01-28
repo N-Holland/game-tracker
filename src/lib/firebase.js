@@ -1,7 +1,8 @@
-const firebase = require("firebase/app");
-//require("firebase/storage");
-require("firebase/firestore");
-require("firebase/auth");
+// const firebase = require("firebase/app");
+// //require("firebase/storage");
+// require("firebase/firestore");
+// require("firebase/auth");
+import firebase from 'firebase'
 
 /**
  * Initialize the Firebase database connection.
@@ -18,7 +19,7 @@ function InitFirebase() {
     measurementId: "G-YZ6SBM5ZWG"
   };
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
   firebase
     .auth()
