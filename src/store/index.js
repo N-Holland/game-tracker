@@ -1,6 +1,7 @@
 import { createStore } from 'vuex';
+//import Vuex from 'vuex';
 
-export const store = createStore({
+const store =  createStore({
   state: {
     currentUser: null,
     firebase: null
@@ -16,3 +17,4 @@ export const store = createStore({
     }
   }
 })
+export default store;

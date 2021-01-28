@@ -1,20 +1,23 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-//import Home from "../views/Home.vue";
+import { createWebHistory, createRouter} from "vue-router";
+import Home from "@/views/Home.vue";
+import About from "@/views/About.vue";
 
-
-Vue.use(VueRouter);
 const routes = [
-  {
-    path: "*",
-    redirect: "/"
-  }
+    {
+      path: "/",
+      name: "Home",
+      component: Home,
+    },
+    {
+      path: "/about",
+      name: "About",
+      component: About,
+    },
 ];
 
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
 });
 
 router.beforeEach((to, from, next) => {

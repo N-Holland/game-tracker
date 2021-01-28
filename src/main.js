@@ -1,14 +1,10 @@
-import Vue from "vue";
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from "./router";
-import store from "./store";
-//import "material-design-icons-iconfont/dist/material-design-icons.css";
+import router from './router'
+import store from './store'
 
-//createApp(App).mount('#app')
-new Vue({
-    router,
-    store,
-    render: h => h(App)
-  }).$mount("#app");
-
+const app = createApp(App)
+app.use(router)
+app.use(store)
+app.mount('#app')
 
