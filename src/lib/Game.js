@@ -1,6 +1,7 @@
 import store from "../store";
-
-const { db } = store.getters.firebase;
+console.log(store.getters.firebase)
+import { db } from './Firebase';
+// const { db } = store.getters.firebase;
 //const { storage } = store.getters.firebase;
 
 const collection = db.collection("Games");
@@ -16,13 +17,14 @@ class Game {
           date,
           characters
         });
+        console.log(game)
         this.UploadFirebase(game);
         return game;
       }
     
       static UploadFirebase(game) {
         this.CreateDoc(game);
-        return this.UploadBlob(game);
+        return (game);
       }
 static CreateDoc(game) {
     collection.add({

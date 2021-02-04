@@ -11,18 +11,23 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//const firebase = require("./lib/Firebase");
 
-const firebase = require("./lib/Firebase");
+
+
+
+//console.log(firebase)
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
   },
   created() {
-    this.$store.commit("setFirebase", firebase);
-    console.log("firebase= ", firebase);
+    //this.$store.commit("setFirebase", firebase);
+    console.log("1")
+    //console.log("firebase= ", firebase);
   },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-     <v-btn text color="primary" @click=Upload>Upload</v-btn>
+    <v-btn text color="primary" @click=Upload>Upload</v-btn>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -32,8 +32,8 @@
 </template>
 
 <script>
-//import Game from "../lib/Game";
-
+import Game from "../lib/Game";
+console.log("2")
 export default {
   name: 'HelloWorld',
   props: {
@@ -42,18 +42,18 @@ export default {
   methods:
   {
     upload() {
-      // let upload;
-      // try {
-      //   upload = Game.Set(
-      //     true,
-      //     Date.now(),
-      //     ["Researcher","Scientist"]
-      //   );
-      //   alert("Upload Success!");
-      // } catch (err) {
-      //   alert("Upload Failed!");
-      // }
-      // return upload;
+      let upload;
+      try {
+        upload = Game.Set(
+          true,
+          Date.now(),
+          ["Researcher","Scientist"]
+        );
+        alert("Upload Success!");
+      } catch (err) {
+        alert("Upload Failed!");
+      }
+      return upload;
     },
   }
 }

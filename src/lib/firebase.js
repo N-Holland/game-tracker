@@ -4,6 +4,7 @@
 // require("firebase/auth");
 import firebase from 'firebase'
 
+
 /**
  * Initialize the Firebase database connection.
  * @returns {firebase.firestore.Firestore}
